@@ -6,4 +6,4 @@ def parse_log_file(filepath, keyword):
 
 # For testing
 if __name__ == "__main__":
-    parse_log_file('app.log', 'error')
+    parse_log_file('example.log', 'error')
