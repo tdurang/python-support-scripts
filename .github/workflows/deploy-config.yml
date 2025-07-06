@@ -24,7 +24,11 @@ jobs:
     - name: Simulate deployment (copy to production/)
       if: ${{ success() }}
       run: |
+        echo "📁 Current directory before deploying:"
+        ls -lh
         mkdir -p production
-        cp firebase_config_test.json production/firebase_config_test.json
+        cp firebase_config.json production/firebase_config.json
         echo "✅ Deployed config to production/"
+        echo "📁 Contents of production:"
         ls -lh production/
+      
