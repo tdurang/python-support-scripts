@@ -25,4 +25,4 @@ def test_endpoint(url, method='GET', data=None):
 
 # Ejemplo de uso
 if __name__ == "__main__":
-    test_endpoint("https://github.com/tdurang/python-support-scripts/tree/main#")
+    test_endpoint("https://jsonplaceholder.typicode.com/posts/1")
