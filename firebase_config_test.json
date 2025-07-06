@@ -1,5 +1,5 @@
 {
-  "apiKey": "ABC12345",
+  "apiKey": "ABC123456",
   "projectId": "my-project-id",
   "databaseURL": "https://my-project.firebaseio.com"
 }
