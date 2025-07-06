@@ -1,0 +1,29 @@
+name: Validate and Deploy Firebase Config
+
+on:
+  push:
+    paths:
+      - 'firebase_config_test.json'
+
+jobs:
+  validate_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Run config validation
+      run: python scripts/validate_config.py
+
+    - name: Simulate deployment (copy to production/)
+      if: ${{ success() }}
+      run: |
+        mkdir -p production
+        cp firebase_config_test.json production/firebase_config_test.json
+        echo "✅ Deployed config to production/"
