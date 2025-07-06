@@ -27,3 +27,4 @@ jobs:
         mkdir -p production
         cp firebase_config_test.json production/firebase_config_test.json
         echo "✅ Deployed config to production/"
+        ls -lh production/
